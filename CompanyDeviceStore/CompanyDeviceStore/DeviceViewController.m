@@ -7,6 +7,7 @@
 //
 
 #import "DeviceViewController.h"
+#import "DeviceDetailViewController.h"
 
 @interface DeviceViewController ()
 @property (strong) NSMutableArray *devices;
@@ -128,10 +129,16 @@
         // Remove device from table view
         [self.devices removeObjectAtIndex:indexPath.row];
         [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"UpdateDevice"]) {
+        NSManagedObject *selectedDevice = [self.devices objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+        DeviceDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.device = selectedDevice;
+    }
 }
 
 /*
