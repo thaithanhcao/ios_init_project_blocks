@@ -24,45 +24,55 @@
 	// Do any additional setup after loading the view, typically from a nib.
     dispatch_async(kBgQueue, ^{
         NSData* data = [NSData dataWithContentsOfURL:kLatestKivaLoansURL];
-        [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
+        
+        //CAO//Begin
+        NSDictionary* json = nil;
+        
+        if (data) {
+            json = [NSJSONSerialization
+                    JSONObjectWithData:data options:kNilOptions error:nil];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self updateUIWithDictionary:json];
+        });
+        //CAO//End
     });
 }
 
-- (void)fetchedData:(NSData *)responseData {
-    // Parse out the json data
-    NSError* error;
-    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-    NSArray* latestLoans = [json objectForKey:@"loans"];
-    
-    NSLog(@"loans: %@", latestLoans);
-    
-    NSDictionary* loan = [latestLoans objectAtIndex:0];
-    
-    NSNumber* fundedAmount = [loan objectForKey:@"funded_amount"];
-    NSNumber* loanAmount = [loan objectForKey:@"loan_amount"];
-    float outstandingAmount = [loanAmount floatValue] - [fundedAmount floatValue];
-    
-    humanReadble.text = [NSString stringWithFormat:@"Latest loan: %@ from %@ needs another $%.2f to pursue their entrepreneural dream",
-                         [loan objectForKey:@"name"],
-                         [(NSDictionary*)[loan objectForKey:@"location"]
-                          objectForKey:@"country"],
-                          outstandingAmount];
-    
-    NSDictionary* info = [NSDictionary dictionaryWithObjectsAndKeys:
-                          [loan objectForKey:@"name"],
-                          @"who",
-                          [(NSDictionary*)[loan objectForKey:@"location"] objectForKey:@"country"],
-                          @"where",
-                          [NSNumber numberWithFloat:outstandingAmount],
-                          @"what",
-                          nil];
-    
-    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:info options:NSJSONWritingPrettyPrinted error:&error];
-    
-    jsonSummary.text = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+-(void)updateUIWithDictionary:(NSDictionary*)json {
+    @try {
+        
+        NSNumber* fundedAmount = json[@"loans"][0][@"funded_amount"];
+        NSNumber* loanAmount = json[@"loans"][0][@"loan_amount"];
+        float outstandingAmount = [loanAmount floatValue] - [fundedAmount floatValue];
+        
+        humanReadble.text = [NSString stringWithFormat:@"Latest loan: %@ from %@ needs another $%.2f to pursue their entrepreneural dream",
+                             json[@"loans"][0][@"name"],
+                             json[@"loans"][0][@"location"][@"country"],
+                             outstandingAmount];
+        
+        NSDictionary* info = [NSDictionary dictionaryWithObjectsAndKeys:
+                              json[@"loans"][0][@"name"],
+                              @"who",
+                              json[@"loans"][0][@"location"][@"country"],
+                              @"where",
+                              [NSNumber numberWithFloat:outstandingAmount],
+                              @"what",
+                              nil];
+        
+        NSError* error;
+        NSData* jsonData = [NSJSONSerialization dataWithJSONObject:info options:NSJSONWritingPrettyPrinted error:&error];
+        
+        jsonSummary.text = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];  
+    }
+    @catch (NSException *exception) {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Could not parse the JSON feed." delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil] show];
+        NSLog(@"Exception: %@", exception);
+    }
 }
 
-- (void)didReceiveMemoryWarning
+- ( void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
