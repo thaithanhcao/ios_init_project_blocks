@@ -56,6 +56,7 @@
 		1882DE431C58CBBD00017F23 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882DE421C58CBBD00017F23 /* AboutViewController.m */; };
 		1882DE461C58D45E00017F23 /* about.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1882DE441C58D45E00017F23 /* about.jpg */; };
 		1882DE471C58D45E00017F23 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 1882DE451C58D45E00017F23 /* about.html */; };
+		18A6102B1C71CB07003E76C2 /* photo-frame-collection.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A6102A1C71CB07003E76C2 /* photo-frame-collection.png */; };
 		18F1CC3F1C71BA2100FB30D1 /* RecipeHandbookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F1CC3E1C71BA2100FB30D1 /* RecipeHandbookCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +118,7 @@
 		1882DE421C58CBBD00017F23 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		1882DE441C58D45E00017F23 /* about.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = about.jpg; sourceTree = "<group>"; };
 		1882DE451C58D45E00017F23 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
+		18A6102A1C71CB07003E76C2 /* photo-frame-collection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame-collection.png"; sourceTree = "<group>"; };
 		18F1CC3D1C71BA2100FB30D1 /* RecipeHandbookCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeHandbookCollectionViewController.h; sourceTree = "<group>"; };
 		18F1CC3E1C71BA2100FB30D1 /* RecipeHandbookCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeHandbookCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,6 +204,7 @@
 		18D2A0741C6057B30017A8B7 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				18A6102A1C71CB07003E76C2 /* photo-frame-collection.png */,
 				1876B3A21C5CBEFF00FA35F6 /* white_chocolate_donut.jpg */,
 				1876B39D1C5CBEFF00FA35F6 /* mushroom_risotto.jpg */,
 				1876B39E1C5CBEFF00FA35F6 /* noodle_with_bbq_pork.jpg */,
@@ -332,6 +335,7 @@
 				186E13DB1C5F200500945BF2 /* thai_shrimp_cake_detail.jpg in Resources */,
 				186E13DC1C5F200500945BF2 /* vegetable_curry_detail.jpg in Resources */,
 				186E13DD1C5F200500945BF2 /* white_chocolate_donut_detail.jpg in Resources */,
+				18A6102B1C71CB07003E76C2 /* photo-frame-collection.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

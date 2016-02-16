@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString *name; // name of recipe
 @property (nonatomic, strong) NSString *prepTime; // preparation time
 @property (nonatomic, strong) NSString *imageFile; // image filename of recipe
+@property (nonatomic, strong) NSString *imageDetailFile; // image detail filename of recipe
 @property (nonatomic, strong) NSArray *ingredients; // ingredients
 
 @end
