@@ -41,6 +41,7 @@
     Recipe *recipe;
     recipe = [recipes objectAtIndex:indexPath.row];
     recipeImageView.image = [UIImage imageNamed:recipe.imageFile];
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"photo-frame-collection.png"]];
     
     return cell;
 }
