@@ -8,6 +8,7 @@
 
 #import "RecipeHandbookCollectionViewController.h"
 #import "Recipe.h"
+#import "RecipeHandbookCollectionReusableView.h"
 
 @interface RecipeHandbookCollectionViewController ()
 {
@@ -53,6 +54,31 @@
     cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"photo-frame-collection.png"]];
     
     return cell;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView *reusableView = nil;
+    
+    if (kind == UICollectionElementKindSectionHeader)
+    {
+        RecipeHandbookCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+        NSString *title = [[NSString alloc]initWithFormat:@"Recipe Group #%i", indexPath.section + 1];
+        headerView.title.text = title;
+        UIImage *headerImage = [UIImage imageNamed:@"header_banner.png"];
+        headerView.backgroundImage.image = headerImage;
+        
+        reusableView = headerView;
+    }
+    
+    if (kind == UICollectionElementKindSectionFooter)
+    {
+        UICollectionReusableView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView" forIndexPath:indexPath];
+        
+        reusableView = footerView;
+    }
+    
+    return reusableView;
 }
 
 - (void)viewDidLoad
