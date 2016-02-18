@@ -26,9 +26,15 @@
     return self;
 }
 
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return [recipes count];
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return recipes.count;
+    //return recipes.count;
+    return [[recipes objectAtIndex:section] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -39,8 +45,11 @@
     
     UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
     Recipe *recipe;
-    recipe = [recipes objectAtIndex:indexPath.row];
+    //recipe = [recipes objectAtIndex:indexPath.row];
+    //+recipe = [recipes[indexPath.section] objectAtIndex:indexPath.row];
+    recipe = [recipes[indexPath.section] objectAtIndex:indexPath.row];
     recipeImageView.image = [UIImage imageNamed:recipe.imageFile];
+    ///recipeImageView.image = [UIImage imageNamed:[[recipes[indexPath.section] objectAtIndex:indexPath.row] imageFile]];
     cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"photo-frame-collection.png"]];
     
     return cell;
@@ -163,7 +172,13 @@
     recipe16.imageDetailFile = @"ham_and_cheese_panini_detail.jpg";
     recipe16.ingredients = [NSArray arrayWithObjects:@"2 tablespoons unsalted butter", @"4 cups thinly sliced shallots", @"2 teaspoons fresh thyme", @"1/4 cup grainy Dijon mustard", @"8 slices rustic white bread", @"8 slices Gruyere cheese", @"8 ounces sliced cooked ham", nil];
     
-    recipes = [NSArray arrayWithObjects:recipe1, recipe2, recipe3, recipe4, recipe5, recipe6, recipe7, recipe8, recipe9, recipe10, recipe11, recipe12, recipe13, recipe14, recipe15, recipe16, nil];
+    NSArray *mainDishImages = [NSArray arrayWithObjects:recipe1, recipe3, recipe16, recipe5, recipe4, recipe10, recipe12, recipe2, recipe11, recipe14, recipe9, nil];
+    NSArray *drinkDessertImages = [NSArray arrayWithObjects:recipe15, recipe6, recipe13, recipe8, recipe7, nil];
+    //recipes = [NSArray arrayWithObjects:recipe1, recipe2, recipe3, recipe4, recipe5, recipe6, recipe7, recipe8, recipe9, recipe10, recipe11, recipe12, recipe13, recipe14, recipe15, recipe16, nil];
+    recipes = [NSArray arrayWithObjects:mainDishImages, drinkDessertImages, nil];
+    
+    UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
+    collectionViewLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
     
 }
 

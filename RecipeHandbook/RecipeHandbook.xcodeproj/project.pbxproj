@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1840FE281C7599F6000A93CF /* RecipeHandbookCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1840FE271C7599F6000A93CF /* RecipeHandbookCollectionReusableView.m */; };
+		185D2A961C757F6C002B2471 /* header_banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 185D2A941C757F6C002B2471 /* header_banner.png */; };
+		185D2A971C757F6C002B2471 /* footer_banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 185D2A951C757F6C002B2471 /* footer_banner.png */; };
 		1866A4731C5735990053CD11 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866A4721C5735990053CD11 /* RecipeDetailViewController.m */; };
 		186CB8421C4BDB8E004B4BE3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186CB8411C4BDB8E004B4BE3 /* UIKit.framework */; };
 		186CB8441C4BDB8E004B4BE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186CB8431C4BDB8E004B4BE3 /* Foundation.framework */; };
@@ -61,6 +64,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1840FE261C7599F6000A93CF /* RecipeHandbookCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeHandbookCollectionReusableView.h; sourceTree = "<group>"; };
+		1840FE271C7599F6000A93CF /* RecipeHandbookCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeHandbookCollectionReusableView.m; sourceTree = "<group>"; };
+		185D2A941C757F6C002B2471 /* header_banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_banner.png; sourceTree = "<group>"; };
+		185D2A951C757F6C002B2471 /* footer_banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_banner.png; sourceTree = "<group>"; };
 		1866A4711C5735990053CD11 /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
 		1866A4721C5735990053CD11 /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
 		186CB83D1C4BDB8E004B4BE3 /* RecipeHandbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeHandbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +193,8 @@
 				1876B37C1C5C98EA00FA35F6 /* Recipe.m */,
 				18F1CC3D1C71BA2100FB30D1 /* RecipeHandbookCollectionViewController.h */,
 				18F1CC3E1C71BA2100FB30D1 /* RecipeHandbookCollectionViewController.m */,
+				1840FE261C7599F6000A93CF /* RecipeHandbookCollectionReusableView.h */,
+				1840FE271C7599F6000A93CF /* RecipeHandbookCollectionReusableView.m */,
 			);
 			path = RecipeHandbook;
 			sourceTree = "<group>";
@@ -204,6 +213,8 @@
 		18D2A0741C6057B30017A8B7 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				185D2A941C757F6C002B2471 /* header_banner.png */,
+				185D2A951C757F6C002B2471 /* footer_banner.png */,
 				18A6102A1C71CB07003E76C2 /* photo-frame-collection.png */,
 				1876B3A21C5CBEFF00FA35F6 /* white_chocolate_donut.jpg */,
 				1876B39D1C5CBEFF00FA35F6 /* mushroom_risotto.jpg */,
@@ -336,6 +347,8 @@
 				186E13DC1C5F200500945BF2 /* vegetable_curry_detail.jpg in Resources */,
 				186E13DD1C5F200500945BF2 /* white_chocolate_donut_detail.jpg in Resources */,
 				18A6102B1C71CB07003E76C2 /* photo-frame-collection.png in Resources */,
+				185D2A961C757F6C002B2471 /* header_banner.png in Resources */,
+				185D2A971C757F6C002B2471 /* footer_banner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +366,7 @@
 				1882DE431C58CBBD00017F23 /* AboutViewController.m in Sources */,
 				1876B37D1C5C98EA00FA35F6 /* Recipe.m in Sources */,
 				18F1CC3F1C71BA2100FB30D1 /* RecipeHandbookCollectionViewController.m in Sources */,
+				1840FE281C7599F6000A93CF /* RecipeHandbookCollectionReusableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
