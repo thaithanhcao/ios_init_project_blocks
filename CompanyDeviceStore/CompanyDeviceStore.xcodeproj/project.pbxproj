@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		186F0FCF1C60B3CF003F4C2A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186F0FCE1C60B3CF003F4C2A /* MainStoryboard.storyboard */; };
+		1872580C1C7D6E10002611BD /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1872580B1C7D6E10002611BD /* readme.txt */; };
 		18B32FAB1C610A6B006D088E /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B32FAA1C610A6B006D088E /* DeviceDetailViewController.m */; };
 		18D2A0861C6071610017A8B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2A0851C6071610017A8B7 /* UIKit.framework */; };
 		18D2A0881C6071610017A8B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2A0871C6071610017A8B7 /* Foundation.framework */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		186F0FCE1C60B3CF003F4C2A /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1872580B1C7D6E10002611BD /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		18B32FA91C610A6B006D088E /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetailViewController.h; sourceTree = "<group>"; };
 		18B32FAA1C610A6B006D088E /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailViewController.m; sourceTree = "<group>"; };
 		18D2A0811C6071610017A8B7 /* CompanyDeviceStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyDeviceStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 		18D2A08D1C6071610017A8B7 /* CompanyDeviceStore */ = {
 			isa = PBXGroup;
 			children = (
+				1872580B1C7D6E10002611BD /* readme.txt */,
 				18D2A0961C6071610017A8B7 /* CompanyDeviceStoreAppDelegate.h */,
 				18D2A0971C6071610017A8B7 /* CompanyDeviceStoreAppDelegate.m */,
 				18D2A0991C6071610017A8B7 /* CompanyDeviceStore.xcdatamodeld */,
@@ -162,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1872580C1C7D6E10002611BD /* readme.txt in Resources */,
 				18D2A0921C6071610017A8B7 /* InfoPlist.strings in Resources */,
 				186F0FCF1C60B3CF003F4C2A /* MainStoryboard.storyboard in Resources */,
 			);
@@ -251,7 +255,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CompanyDeviceStore/CompanyDeviceStore-Prefix.pch";
 				INFOPLIST_FILE = "CompanyDeviceStore/CompanyDeviceStore-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -263,7 +267,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CompanyDeviceStore/CompanyDeviceStore-Prefix.pch";
 				INFOPLIST_FILE = "CompanyDeviceStore/CompanyDeviceStore-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
