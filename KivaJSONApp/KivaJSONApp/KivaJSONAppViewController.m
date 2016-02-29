@@ -7,6 +7,7 @@
 //
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 #define kLatestKivaLoansURL [NSURL URLWithString:@"http://api.kivaws.org/v1/loans/search.json?status=fundraising"]
+#define kAibeOnlineBookingURL [NSURL URLWithString:@"http://adinaobooking.azurewebsites.net/api/Hotels?location=phan%20thiet&numGuest=2"]
 
 #import "KivaJSONAppViewController.h"
 
@@ -22,8 +23,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    ///dispatch_async(kBgQueue, ^{
+    ///    NSData* data = [NSData dataWithContentsOfURL:kLatestKivaLoansURL];
     dispatch_async(kBgQueue, ^{
-        NSData* data = [NSData dataWithContentsOfURL:kLatestKivaLoansURL];
+        NSData* data = [NSData dataWithContentsOfURL:kAibeOnlineBookingURL];
         
         //CAO//Begin
         NSDictionary* json = nil;
@@ -42,7 +45,7 @@
 
 -(void)updateUIWithDictionary:(NSDictionary*)json {
     @try {
-        
+        /*
         NSNumber* fundedAmount = json[@"loans"][0][@"funded_amount"];
         NSNumber* loanAmount = json[@"loans"][0][@"loan_amount"];
         float outstandingAmount = [loanAmount floatValue] - [fundedAmount floatValue];
@@ -64,7 +67,23 @@
         NSError* error;
         NSData* jsonData = [NSJSONSerialization dataWithJSONObject:info options:NSJSONWritingPrettyPrinted error:&error];
         
-        jsonSummary.text = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];  
+        jsonSummary.text = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        */
+        
+        
+        //CAO//Begin
+        //json[@"data"][0][@"hotelName"]
+        //json[@"data"][0][@"latitude"]
+        //json[@"data"][0][@"longitude"]
+        //json[@"data"][0][@"address"]
+        
+        humanReadble.text = [NSString stringWithFormat:@
+                             "Hotel name: %@\nLat: %@\nLong: %@\nAddress: %@\n",
+                             json[@"data"][0][@"hotelName"],
+                             json[@"data"][0][@"latitude"],
+                             json[@"data"][0][@"longitude"],
+                             json[@"data"][0][@"address"]];
+        //CAO//End
     }
     @catch (NSException *exception) {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Could not parse the JSON feed." delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil] show];
