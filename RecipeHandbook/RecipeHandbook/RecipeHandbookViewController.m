@@ -112,6 +112,9 @@
             indexPath = [self.tableView indexPathForSelectedRow];
             destViewController.recipe = [recipes objectAtIndex:indexPath.row];
         }
+        
+        // Hide bottom tab bar in the detail view
+        destViewController.hidesBottomBarWhenPushed = YES;
     }
 }
 

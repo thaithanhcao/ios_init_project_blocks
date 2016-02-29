@@ -60,6 +60,7 @@
 		1882DE461C58D45E00017F23 /* about.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1882DE441C58D45E00017F23 /* about.jpg */; };
 		1882DE471C58D45E00017F23 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 1882DE451C58D45E00017F23 /* about.html */; };
 		18A6102B1C71CB07003E76C2 /* photo-frame-collection.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A6102A1C71CB07003E76C2 /* photo-frame-collection.png */; };
+		18E83B191C7C59D100E2C5A9 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18E83B181C7C59D100E2C5A9 /* readme.txt */; };
 		18F1CC3F1C71BA2100FB30D1 /* RecipeHandbookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F1CC3E1C71BA2100FB30D1 /* RecipeHandbookCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		1882DE441C58D45E00017F23 /* about.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = about.jpg; sourceTree = "<group>"; };
 		1882DE451C58D45E00017F23 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 		18A6102A1C71CB07003E76C2 /* photo-frame-collection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame-collection.png"; sourceTree = "<group>"; };
+		18E83B181C7C59D100E2C5A9 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		18F1CC3D1C71BA2100FB30D1 /* RecipeHandbookCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeHandbookCollectionViewController.h; sourceTree = "<group>"; };
 		18F1CC3E1C71BA2100FB30D1 /* RecipeHandbookCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeHandbookCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 		186CB8321C4BDB8E004B4BE3 = {
 			isa = PBXGroup;
 			children = (
+				18E83B181C7C59D100E2C5A9 /* readme.txt */,
 				1882DE3C1C58C35000017F23 /* LaunchImage.png */,
 				1882DE441C58D45E00017F23 /* about.jpg */,
 				1882DE451C58D45E00017F23 /* about.html */,
@@ -349,6 +352,7 @@
 				18A6102B1C71CB07003E76C2 /* photo-frame-collection.png in Resources */,
 				185D2A961C757F6C002B2471 /* header_banner.png in Resources */,
 				185D2A971C757F6C002B2471 /* footer_banner.png in Resources */,
+				18E83B191C7C59D100E2C5A9 /* readme.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +418,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -434,7 +438,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -447,7 +451,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RecipeHandbook/RecipeHandbook-Prefix.pch";
 				INFOPLIST_FILE = "RecipeHandbook/RecipeHandbook-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -459,7 +463,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RecipeHandbook/RecipeHandbook-Prefix.pch";
 				INFOPLIST_FILE = "RecipeHandbook/RecipeHandbook-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
