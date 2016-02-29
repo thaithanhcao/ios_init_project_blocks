@@ -23,6 +23,7 @@
 		18F1ADA91C7D5A1400BCE2B8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F1ADA81C7D5A1400BCE2B8 /* QuartzCore.framework */; };
 		18F1ADAC1C7D5C0A00BCE2B8 /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F1ADAB1C7D5C0A00BCE2B8 /* InitialSlidingViewController.m */; };
 		18F1ADB11C7D5F0800BCE2B8 /* ToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F1ADB01C7D5F0800BCE2B8 /* ToDoViewController.m */; };
+		18FA61151C83EE1F00157140 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18FA61141C83EE1F00157140 /* readme.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		18F1ADAB1C7D5C0A00BCE2B8 /* InitialSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialSlidingViewController.m; sourceTree = "<group>"; };
 		18F1ADAF1C7D5F0800BCE2B8 /* ToDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoViewController.h; sourceTree = "<group>"; };
 		18F1ADB01C7D5F0800BCE2B8 /* ToDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoViewController.m; sourceTree = "<group>"; };
+		18FA61141C83EE1F00157140 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = readme.txt; path = ../../MapKit/readme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		18F1AD831C7D58C200BCE2B8 /* SlideToDo */ = {
 			isa = PBXGroup;
 			children = (
+				18FA61141C83EE1F00157140 /* readme.txt */,
 				18F1ADA01C7D599A00BCE2B8 /* Vendor */,
 				18F1AD8C1C7D58C200BCE2B8 /* SlideToDoAppDelegate.h */,
 				18F1AD8D1C7D58C200BCE2B8 /* SlideToDoAppDelegate.m */,
@@ -199,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FA61151C83EE1F00157140 /* readme.txt in Resources */,
 				18F1AD881C7D58C200BCE2B8 /* InfoPlist.strings in Resources */,
 				18F1AD901C7D58C200BCE2B8 /* Default.png in Resources */,
 				18F1AD921C7D58C200BCE2B8 /* Default@2x.png in Resources */,
